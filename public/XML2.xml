@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+    <infNFe versao="4.00" Id="NFe35191028398136000110550010000038001346188802">
+      <ide>
+        <cUF>35</cUF>
+        <cNF>34618880</cNF>
+        <natOp>Remessa em Garantia</natOp>
+        <mod>55</mod>
+        <serie>1</serie>
+        <nNF>3800</nNF>
+        <dhEmi>2019-10-18T09:06:12-03:00</dhEmi>
+        <dhSaiEnt>2019-10-18T09:06:12-03:00</dhSaiEnt>
+        <tpNF>1</tpNF>
+        <idDest>2</idDest>
+        <cMunFG>3550308</cMunFG>
+        <tpImp>1</tpImp>
+        <tpEmis>1</tpEmis>
+        <cDV>2</cDV>
+        <tpAmb>1</tpAmb>
+        <finNFe>1</finNFe>
+        <indFinal>1</indFinal>
+        <indPres>0</indPres>
+        <procEmi>0</procEmi>
+        <verProc>Bling 1.0</verProc>
+      </ide>
+      <emit>
+        <CNPJ>28398136000110</CNPJ>
+        <xNome>WBR COMERCIO E REPRESENTACAO EIRELI</xNome>
+        <xFant>WBR Group</xFant>
+        <enderEmit>
+          <xLgr>Rua Doutor Mario Cardim</xLgr>
+          <nro>363</nro>
+          <xBairro>Vila Mariana</xBairro>
+          <cMun>3550308</cMun>
+          <xMun>Sao Paulo</xMun>
+          <UF>SP</UF>
+          <CEP>04019000</CEP>
+          <cPais>1058</cPais>
+          <xPais>Brasil</xPais>
+          <fone>11995851507</fone>
+        </enderEmit>
+        <IE>123121019115</IE>
+        <IM>0361360028-5</IM>
+        <CNAE>4751201</CNAE>
+        <CRT>1</CRT>
+      </emit>
+      <dest>
+        <CPF>13119517682</CPF>
+        <xNome>Felipe Henrique Fonseca Oliveira</xNome>
+        <enderDest>
+          <xLgr>Rua Joaquim Firmino</xLgr>
+          <nro>235</nro>
+          <xBairro>Centro</xBairro>
+          <cMun>4108304</cMun>
+          <xMun>Foz do Iguacu</xMun>
+          <UF>PR</UF>
+          <CEP>85851070</CEP>
+          <cPais>1058</cPais>
+          <xPais>Brasil</xPais>
+          <fone>35984249391</fone>
+        </enderDest>
+        <indIEDest>9</indIEDest>
+        <email>felipe.henrique.f.o@gmail.com</email>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>960-000764</cProd>
+          <cEAN>097855074355</cEAN>
+          <xProd>HD Pro Webcam C920-N/A-USB-N/A-SAMR</xProd>
+          <NCM>85258019</NCM>
+          <CEST>2110700</CEST>
+          <indEscala>S</indEscala>
+          <CFOP>6949</CFOP>
+          <uCom>EA</uCom>
+          <qCom>1.0000</qCom>
+          <vUnCom>204.82</vUnCom>
+          <vProd>204.82</vProd>
+          <cEANTrib>097855074355</cEANTrib>
+          <uTrib>EA</uTrib>
+          <qTrib>1.0000</qTrib>
+          <vUnTrib>204.82</vUnTrib>
+          <indTot>1</indTot>
+          <nItemPed>1</nItemPed>
+        </prod>
+        <imposto>
+          <ICMS>
+            <ICMSSN102>
+              <orig>1</orig>
+              <CSOSN>400</CSOSN>
+            </ICMSSN102>
+          </ICMS>
+          <PIS>
+            <PISNT>
+              <CST>07</CST>
+            </PISNT>
+          </PIS>
+          <COFINS>
+            <COFINSNT>
+              <CST>07</CST>
+            </COFINSNT>
+          </COFINS>
+        </imposto>
+      </det>
+      <total>
+        <ICMSTot>
+          <vBC>0.00</vBC>
+          <vICMS>0.00</vICMS>
+          <vICMSDeson>0.00</vICMSDeson>
+          <vFCP>0.00</vFCP>
+          <vBCST>0.00</vBCST>
+          <vST>0.00</vST>
+          <vFCPST>0.00</vFCPST>
+          <vFCPSTRet>0.00</vFCPSTRet>
+          <vProd>204.82</vProd>
+          <vFrete>0.00</vFrete>
+          <vSeg>0.00</vSeg>
+          <vDesc>0.00</vDesc>
+          <vII>0.00</vII>
+          <vIPI>0.00</vIPI>
+          <vIPIDevol>0.00</vIPIDevol>
+          <vPIS>0.00</vPIS>
+          <vCOFINS>0.00</vCOFINS>
+          <vOutro>0.00</vOutro>
+          <vNF>204.82</vNF>
+        </ICMSTot>
+      </total>
+      <transp>
+        <modFrete>0</modFrete>
+        <transporta>
+          <xNome>SEDEX</xNome>
+        </transporta>
+        <vol>
+          <esp>Volumes</esp>
+          <pesoL>0.275</pesoL>
+          <pesoB>0.275</pesoB>
+        </vol>
+      </transp>
+      <pag>
+        <detPag>
+          <tPag>01</tPag>
+          <vPag>0.00</vPag>
+        </detPag>
+        <detPag>
+          <tPag>90</tPag>
+          <vPag>0.00</vPag>
+        </detPag>
+      </pag>
+      <infAdic>
+        <infCpl>DOCUMENTO EMITIDO POR ME OU EPP OPTANTE PELO SIMPLES NACIONAL. OPERACAO DESTINADA A USUARIO FINAL, NAO GERA DIREITO A CREDITO FISCAL DE ICMS E IPI. APLICABILIDADE DO CONVENIO ICMS N 93/2015 REFERENTE DIFAL NAS OPERACOES PARA USUARIO FINAL SUSPENSA POR MEDIDA CAUTELAR DO STF - SUPREMO TRIBUNAL FEDERAL.&lt;br /&gt;Pedido Bling: 100003914&lt;br /&gt;Endereco de entrega: Felipe Henrique Fonseca Oliveira, Rua Joaquim Firmino, N 235, Bairro Centro, Foz do Iguacu - PR, 85.851-070&lt;br /&gt;N Pedido Loja: 100003913&lt;br /&gt;Canal de Vendas: direto&lt;br /&gt;Protocolo 1717067&lt;br /&gt;</infCpl>
+      </infAdic>
+      <infRespTec>
+        <CNPJ>01056417000139</CNPJ>
+        <xContato>Jonatan Fracasso da Silva</xContato>
+        <email>fiscal@bling.com.br</email>
+        <fone>05430550479</fone>
+      </infRespTec>
+    </infNFe>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+        <Reference URI="#NFe35191028398136000110550010000038001346188802">
+          <Transforms>
+            <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+            <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+          </Transforms>
+          <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+          <DigestValue>3mWPMeQAmy3LoLk4ZkfQ6GHyIXs=</DigestValue>
+        </Reference>
+      </SignedInfo>
+      <SignatureValue>LVvFgut2PQsNa/wyQEWkQbip4KJI7BkvPEEigEQJ+tLo0m6ZvtZ7zEIQDFg06bn0q0sds/0XcEBMo6C1QQni6q05rf8zXyy+YtMoc6AZ25P5URv31+Sa3JJrNqoZ10gf7kjwL0n0RqpIP5koyi6VsAeh4PqHR9oWBE7q5MXZx3rjls48LntC95vfg4KY6C1eVzh17vlmlgP9IMWup1S8stA09/ATHSMfjPD/hQtPs/8zo74eSEvbUC9jMv6PjxWfgKmuKNny2smjoUGaxK6xQE5DkNHDmzbd4jAkgBBvNPPuy46aG/usV0aeRnIQPtXWJrzTkg5xya6g7R3kpg58Ww==</SignatureValue>
+      <KeyInfo>
+        <X509Data>
+          <X509Certificate>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</X509Certificate>
+        </X509Data>
+      </KeyInfo>
+    </Signature>
+  </NFe>
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>SP_NFE_PL009_V4</verAplic>
+      <chNFe>35191028398136000110550010000038001346188802</chNFe>
+      <dhRecbto>2019-10-18T09:06:12-03:00</dhRecbto>
+      <nProt>135190772832472</nProt>
+      <digVal>3mWPMeQAmy3LoLk4ZkfQ6GHyIXs=</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NF-e</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>

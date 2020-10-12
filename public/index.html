@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Leitor de Nota Fiscal</title>
+  </head>
+  <body>
+    <header>
+      <h1>Leitor de XML - Nota Fiscal</h1>
+    </header>
+    <menu>
+      <label id="labelXML" for="inputXML">Escolher XML</label>
+      <input id="inputXML" name="inputXML" type="file" accept=".xml" />
+      <input
+        id="buttonXML"
+        type="button"
+        onclick="carregarXML()"
+        value="Carregar XML"
+      />
+    </menu>
+    <main>
+      <div>
+        <fieldset>
+          <legend>Informações da Nota Fiscal</legend>
+
+          <label for="cNF">Chave de Acesso</label>
+          <input
+            type="text"
+            value=""
+            id="cNF"
+            name="cNF"
+            size="47"
+            maxlength="47"
+            required
+          />
+
+          <label for="cUF">UF Emitente</label>
+          <input
+            type="text"
+            value=""
+            id="cUF"
+            name="cUF"
+            size="2"
+            maxlength="2"
+            required
+          />
+
+          <br /><br />
+
+          <label for="natOp">Descrição da Natureza da Operação</label>
+          <input
+            type="text"
+            value=""
+            id="natOp"
+            name="natOp"
+            size="60"
+            required
+          />
+
+          <label for="mod">Modelo da Nota Fiscal</label>
+          <input type="text" value="" id="mod" name="mod" size="2" required />
+
+          <br /><br />
+
+          <label for="serie">Série da Nota Fiscal</label>
+          <input
+            type="text"
+            value=""
+            id="serie"
+            name="serie"
+            size="3"
+            required
+          />
+
+          <label for="nNF">Número da Nota Fiscal</label>
+          <input type="text" value="" id="nNF" name="nNF" size="9" required />
+
+          <label for="dhEmi">Data da Emissão</label>
+          <input type="text" value="" id="dhEmi" name="dhEmi" required />
+
+          <label for="tpNf">Tipo de Operação</label>
+          <input type="text" value="" id="tpNf" name="tpNf" size="1" required />
+
+          <br /><br />
+
+          <label for="idDest"
+            >Identificador de Local de Destino da Operação</label
+          >
+          <input
+            type="text"
+            value=""
+            id="idDest"
+            name="idDest"
+            size="1"
+            required
+          />
+
+          <label for="finNFe">Finalidade da Emissão da NF-e</label>
+          <input
+            type="text"
+            value=""
+            id="finNFe"
+            name="finNFe"
+            size="1"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações do Emitente</legend>
+
+          <label for="xNome">Razão Social ou Nome do Emitente</label>
+          <input
+            type="text"
+            value=""
+            id="xNome"
+            name="xNome"
+            size="60"
+            required
+          />
+
+          <br /><br />
+
+          <label for="xFant">Nome Fantasia</label>
+          <input
+            type="text"
+            value=""
+            id="xFant"
+            name="xFant"
+            size="60"
+            required
+          />
+
+          <br /><br />
+
+          <label for="CNPJ">CNPJ do Emitente</label>
+          <input type="text" value="" id="CNPJ" name="CNPJ" size="14" />
+
+          <label for="CPF">CPF do Emitente</label>
+          <input type="text" value="" id="CPF" name="CPF" size="11" />
+
+          <br /><br />
+
+          <label for="IE">Inscrição Estadual</label>
+          <input type="text" value="" id="IE" name="IE" size="14" />
+
+          <br /><br />
+
+          <fieldset>
+            <legend>Endereço do Emitente</legend>
+
+            <label for="xLgr">Logradouro</label>
+            <input
+              type="text"
+              value=""
+              id="xLgr"
+              name="xLgr"
+              size="60"
+              required
+            />
+
+            <label for="nro">Número</label>
+            <input type="text" value="" id="nro" name="nro" required />
+
+            <br /><br />
+
+            <label for="xCpl">Complemento</label>
+            <input type="text" value="" id="xCpl" name="xCpl" required />
+
+            <label for="xBairro">Bairro</label>
+            <input type="text" value="" id="xBairro" name="xBairro" required />
+
+            <label for="cMun">Código do Município</label>
+            <input
+              type="text"
+              value=""
+              id="cMun"
+              name="cMun"
+              size="7"
+              required
+            />
+
+            <label for="UFEmitente">UF</label>
+            <input
+              type="text"
+              value=""
+              id="UFEmitente"
+              name="UFEmitente"
+              size="7"
+              required
+            />
+
+            <br /><br />
+
+            <label for="CEPEmitente">CEP</label>
+            <input
+              type="text"
+              value=""
+              id="CEPEmitente"
+              name="CEPEmitente"
+              size="8"
+              required
+            />
+
+            <label for="cPaisEmitente">Código do País</label>
+            <input
+              type="text"
+              value=""
+              id="cPaisEmitente"
+              name="cPaisEmitente"
+              size="4"
+              required
+            />
+
+            <label for="xPaisEmitente">Nome do País</label>
+            <input
+              type="text"
+              value=""
+              id="xPaisEmitente"
+              name="xPaisEmitente"
+              required
+            />
+
+            <label for="foneEmitente">Telefone</label>
+            <input
+              type="text"
+              value=""
+              id="foneEmitente"
+              name="foneEmitente"
+              required
+            />
+
+            <br /><br />
+
+            <label for="emailEmitente">E-mail</label>
+            <input
+              type="text"
+              value=""
+              id="emailEmitente"
+              name="emailEmitente"
+              required
+            />
+          </fieldset>
+        </fieldset>
+
+        <fieldset>
+          <legend>Informações do Destinatário</legend>
+
+          <label for="xNomeDestinatario"
+            >Razão Social ou Nome do Destinatário</label
+          >
+          <input
+            type="text"
+            value=""
+            id="xNomeDestinatario"
+            name="xNomeDestinatario"
+            size="60"
+            required
+          />
+
+          <br /><br />
+
+          <label for="CNPJDestinatario">CNPJ</label>
+          <input
+            type="text"
+            value=""
+            id="CNPJDestinatario"
+            name="CNPJDestinatario"
+            required
+          />
+
+          <label for="CPFDestinatario">CPF</label>
+          <input
+            type="text"
+            value=""
+            id="CPFDestinatario"
+            name="CPFDestinatario"
+            required
+          />
+
+          <br /><br />
+
+          <label for="xFantDestinatario">Nome Fantasia</label>
+          <input
+            type="text"
+            value=""
+            id="xFantDestinatario"
+            name="xFantDestinatario"
+            required
+          />
+
+          <label for="IEDestinatario">Inscrição Estadual do Destinatário</label>
+          <input
+            type="text"
+            value=""
+            id="IEDestinatario"
+            name="IEDestinatario"
+            required
+          />
+
+          <br /><br />
+
+          <fieldset>
+            <legend>Endereço do Destinatário</legend>
+
+            <label for="xLgrDestinatario">Logradouro</label>
+            <input
+              type="text"
+              value=""
+              id="xLgrDestinatario"
+              name="xLgrDestinatario"
+              required
+            />
+
+            <label for="nroDestinatario">Número</label>
+            <input
+              type="text"
+              value=""
+              id="nroDestinatario"
+              name="nroDestinatario"
+              required
+            />
+
+            <label for="xBairroDestinatario">Bairro</label>
+            <input
+              type="text"
+              value=""
+              id="xBairroDestinatario"
+              name="xBairroDestinatario"
+              required
+            />
+
+            <br /><br />
+
+            <label for="xMunDestinatario">Nome do Município</label>
+            <input
+              type="text"
+              value=""
+              id="xMunDestinatario"
+              name="xMunDestinatario"
+              required
+            />
+
+            <label for="cMunDestinatario">Código do Município</label>
+            <input
+              type="text"
+              value=""
+              id="cMunDestinatario"
+              name="cMunDestinatario"
+              required
+            />
+
+            <br /><br />
+
+            <label for="UFDestinatario">UF do Destinatário</label>
+            <input
+              type="text"
+              value=""
+              id="UFDestinatario"
+              name="UFDestinatario"
+              required
+            />
+
+            <label for="CEPDestinatario">CEP</label>
+            <input
+              type="text"
+              value=""
+              id="CEPDestinatario"
+              name="CEPDestinatario"
+              required
+            />
+
+            <label for="cPaisDestinatario">Código do País</label>
+            <input
+              type="text"
+              value=""
+              id="cPaisDestinatario"
+              name="cPaisDestinatario"
+              required
+            />
+
+            <br /><br />
+
+            <label for="xPaisDestinatario">Nome do País</label>
+            <input
+              type="text"
+              value=""
+              id="xPaisDestinatario"
+              name="xPaisDestinatario"
+              required
+            />
+
+            <label for="foneDestinatario">Telefone</label>
+            <input
+              type="text"
+              value=""
+              id="foneDestinatario"
+              name="foneDestinatario"
+              required
+            />
+          </fieldset>
+        </fieldset>
+      </div>
+
+      <div id="container">
+        <table border="1" id="tabela">
+          <th class="campo">Índice</th>
+          <th class="campo">Código do Produto</th>
+          <th class="campo">Descrição do Produto/Serviços</th>
+          <th class="campo">NCM/SH</th>
+          <th class="campo">CFOP</th>
+          <th class="campo">UN</th>
+          <th class="campo">QTD</th>
+          <th class="campo">V. UNITÁRIO</th>
+          <th class="campo">V. TOTAL</th>
+          <th class="campo">BS ICMS</th>
+          <th class="campo">V. ICMS</th>
+          <th class="campo">V. IPI</th>
+          <th class="campo">ALQ. ICMS</th>
+          <th class="campo">ALQ. IPI</th>
+          <tbody id="corpoTabela"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script>
+      let xmlContent = '';
+      let arquivo = '';
+      function carregarXML() {
+        let inputXML = document.getElementById('inputXML');
+        arquivo = inputXML.files[0].name;
+        lerXML(arquivo);
+      }
+
+      function lerXML(arquivo) {
+        fetch(arquivo).then((response) => {
+          response.text().then((xml) => {
+            xmlContent = xml;
+            let parser = new DOMParser();
+            let xmlDOM = parser.parseFromString(xmlContent, 'application/xml');
+
+            // Informações do Header da Nota Fiscal
+            let informacaoNFe = xmlDOM.querySelector('infNFe');
+            let identificacaoNFe = xmlDOM.querySelector('ide');
+
+            let chaveDeAcesso = document.getElementById('cNF');
+            let codigoUF = document.getElementById('cUF');
+            let naturezaDaOperacao = document.getElementById('natOp');
+            let modelo = document.getElementById('mod');
+            let serie = document.getElementById('serie');
+            let numeroNotaFiscal = document.getElementById('nNF');
+            let dataEmissao = document.getElementById('dhEmi');
+            let tipoOperacao = document.getElementById('tpNf');
+            let localDestinoOp = document.getElementById('idDest');
+            let finalidade = document.getElementById('finNFe');
+
+            console.log(identificacaoNFe.childElementCount);
+
+            //replace remove o que não for dígito númerico
+            chaveDeAcesso.value = informacaoNFe
+              .getAttribute('Id')
+              .replace(/[^\d]+/g, '');
+            codigoUF.value = identificacaoNFe.querySelector('cUF').innerHTML;
+            naturezaDaOperacao.value = identificacaoNFe.querySelector(
+              'natOp'
+            ).innerHTML;
+            modelo.value = identificacaoNFe.querySelector('mod').innerHTML;
+            serie.value = identificacaoNFe.querySelector('serie').innerHTML;
+            numeroNotaFiscal.value = identificacaoNFe.querySelector(
+              'nNF'
+            ).innerHTML;
+            dataEmissao.value = identificacaoNFe.querySelector(
+              'dhEmi'
+            ).innerHTML;
+            tipoOperacao.value = identificacaoNFe.querySelector(
+              'tpNF'
+            ).innerHTML;
+            localDestinoOp.value = identificacaoNFe.querySelector(
+              'idDest'
+            ).innerHTML;
+            finalidade.value = identificacaoNFe.querySelector(
+              'finNFe'
+            ).innerHTML;
+
+            // Informações do Emitente
+            let informacaoEmitente = xmlDOM.querySelector('emit');
+
+            let razaoSocial = document.getElementById('xNome');
+            let nomeFantasia = document.getElementById('xFant');
+            let CNPJ = document.getElementById('CNPJ');
+            let CPF = document.getElementById('CPF');
+            let IE = document.getElementById('IE');
+
+            let informacaoEnderecoEmitente = xmlDOM.querySelector('enderEmit');
+
+            let xLgr = document.getElementById('xLgr');
+            let nro = document.getElementById('nro');
+            let xCpl = document.getElementById('xCpl');
+            let xBairro = document.getElementById('xBairro');
+            let cMun = document.getElementById('cMun');
+            let UFEmitente = document.getElementById('UFEmitente');
+            let CEPEmitente = document.getElementById('CEPEmitente');
+            let cPaisEmitente = document.getElementById('cPaisEmitente');
+            let xPaisEmitente = document.getElementById('xPaisEmitente');
+            let foneEmitente = document.getElementById('foneEmitente');
+            let emailEmitente = document.getElementById('emailEmitente');
+
+            razaoSocial.value = informacaoEmitente.querySelector(
+              'xNome'
+            ).innerHTML;
+            nomeFantasia.value = informacaoEmitente.querySelector(
+              'xFant'
+            ).innerHTML;
+
+            if (informacaoEmitente.querySelector('CNPJ') != null) {
+              CNPJ.value = informacaoEmitente.querySelector('CNPJ').innerHTML;
+              CPF.value = 'XXXXXXXXXXX';
+            } else {
+              CPF.value = informacaoEmitente.querySelector('CPF').innerHTML;
+              CNPJ.value = 'XXXXXXXXXXXXXX';
+            }
+            IE.value = informacaoEmitente.querySelector('IE').innerHTML;
+            xLgr.value = informacaoEnderecoEmitente.querySelector(
+              'xLgr'
+            ).innerHTML;
+            nro.value = informacaoEnderecoEmitente.querySelector(
+              'nro'
+            ).innerHTML;
+            if (informacaoEnderecoEmitente.querySelector('xCpl') != null) {
+              xCpl.value = informacaoEnderecoEmitente.querySelector(
+                'xCpl'
+              ).innerHTML;
+            } else {
+              xCpl.value = 'XXXXXXXXXXXXXX';
+            }
+
+            xBairro.value = informacaoEnderecoEmitente.querySelector(
+              'xBairro'
+            ).innerHTML;
+            cMun.value = informacaoEnderecoEmitente.querySelector(
+              'cMun'
+            ).innerHTML;
+            UFEmitente.value = informacaoEnderecoEmitente.querySelector(
+              'UF'
+            ).innerHTML;
+            CEPEmitente.value = informacaoEnderecoEmitente.querySelector(
+              'CEP'
+            ).innerHTML;
+            cPaisEmitente.value = informacaoEnderecoEmitente.querySelector(
+              'cPais'
+            ).innerHTML;
+            xPaisEmitente.value = informacaoEnderecoEmitente.querySelector(
+              'xPais'
+            ).innerHTML;
+
+            if (informacaoEnderecoEmitente.querySelector('fone') != null) {
+              foneEmitente.value = informacaoEnderecoEmitente.querySelector(
+                'fone'
+              ).innerHTML;
+            } else {
+              foneEmitente.value = 'XXXXXXXXXXXXXX';
+            }
+
+            if (informacaoEnderecoEmitente.querySelector('email') != null) {
+              emailEmitente.value = informacaoEnderecoEmitente.querySelector(
+                'email'
+              ).innerHTML;
+            } else {
+              emailEmitente.value = 'Não informado...';
+            }
+
+            // Informações do Destinatário
+            let destinatario = xmlDOM.querySelector('dest');
+            let enderecoDestinatario = xmlDOM.querySelector('enderDest');
+
+            let CNPJDestinatario = document.getElementById('CNPJDestinatario');
+            let CPFDestinatario = document.getElementById('CPFDestinatario');
+            let xNomeDestinatario = document.getElementById(
+              'xNomeDestinatario'
+            );
+            let xFantDestinatario = document.getElementById(
+              'xFantDestinatario'
+            );
+            let IEDestinatario = document.getElementById('IEDestinatario');
+
+            let CEPDestinatario = document.getElementById('CEPDestinatario');
+            let xLgrDestinatario = document.getElementById('xLgrDestinatario');
+            let nroDestinatario = document.getElementById('nroDestinatario');
+            let xCplDestinatario = document.getElementById('xCplDestinatario');
+            let xBairroDestinatario = document.getElementById(
+              'xBairroDestinatario'
+            );
+            let cMunDestinatario = document.getElementById('cMunDestinatario');
+            let xMunDestinatario = document.getElementById('xMunDestinatario');
+            let UFDestinatario = document.getElementById('UFDestinatario');
+            let cPaisDestinatario = document.getElementById(
+              'cPaisDestinatario'
+            );
+            let xPaisDestinatario = document.getElementById(
+              'xPaisDestinatario'
+            );
+            let foneDestinatario = document.getElementById('foneDestinatario');
+
+            if (destinatario.querySelector('CNPJ') != null) {
+              CNPJDestinatario.value = destinatario.querySelector(
+                'CNPJ'
+              ).innerHTML;
+              xNomeDestinatario.value = destinatario.querySelector(
+                'xNome'
+              ).innerHTML;
+              xFantDestinatario.value = destinatario.querySelector(
+                'xFant'
+              ).innerHTML;
+              IEDestinatario.value = destinatario.querySelector('IE').innerHTML;
+              CPFDestinatario.value = 'XXXXXXXXXX';
+            } else {
+              CPFDestinatario.value = destinatario.querySelector(
+                'CPF'
+              ).innerHTML;
+              xNomeDestinatario.value = destinatario.querySelector(
+                'xNome'
+              ).innerHTML;
+              CNPJDestinatario.value = 'XXXXXXXXXXXXXX';
+              xFantDestinatario.value = 'XXXXXXXXXXXXXX';
+              IEDestinatario.value = 'XXXXXXXXXXXXXX';
+            }
+
+            CEPDestinatario.value = destinatario.querySelector('CEP').innerHTML;
+            xLgrDestinatario.value = destinatario.querySelector(
+              'xLgr'
+            ).innerHTML;
+            nroDestinatario.value = destinatario.querySelector('nro').innerHTML;
+            xBairroDestinatario.value = destinatario.querySelector(
+              'xBairro'
+            ).innerHTML;
+            cMunDestinatario.value = destinatario.querySelector(
+              'cMun'
+            ).innerHTML;
+            xMunDestinatario.value = destinatario.querySelector(
+              'xMun'
+            ).innerHTML;
+            UFDestinatario.value = destinatario.querySelector('UF').innerHTML;
+            cPaisDestinatario.value = destinatario.querySelector(
+              'cPais'
+            ).innerHTML;
+            xPaisDestinatario.value = destinatario.querySelector(
+              'xPais'
+            ).innerHTML;
+            foneDestinatario.value = destinatario.querySelector(
+              'fone'
+            ).innerHTML;
+
+            let detalhamentos = xmlDOM.querySelectorAll('det');
+            let totalIPI = xmlDOM.querySelector('total');
+            let tabela = document.getElementById('corpoTabela');
+
+            detalhamentos.forEach((detalhe) => {
+              let row = document.createElement('tr');
+              let nItem = document.createElement('td');
+              let cProd = document.createElement('td');
+              let xProd = document.createElement('td');
+              let NCM = document.createElement('td');
+              let CFOP = document.createElement('td');
+              let uCom = document.createElement('td');
+              let qCom = document.createElement('td');
+              let vUnCom = document.createElement('td');
+              let vProd = document.createElement('td');
+              let vBC = document.createElement('td');
+              let pICMS = document.createElement('td');
+              let vICMS = document.createElement('td');
+              let pIPI = document.createElement('td');
+              let vIPI = document.createElement('td');
+
+              nItem.innerText = detalhe.getAttribute('nItem');
+
+              let prod = detalhe.querySelector('prod');
+              let imposto = detalhe.querySelector('imposto');
+
+              cProd.innerText = prod.querySelector('cProd').innerHTML;
+              xProd.innerText = prod.querySelector('xProd').innerHTML;
+              NCM.innerText = prod.querySelector('NCM').innerHTML;
+              CFOP.innerText = prod.querySelector('CFOP').innerHTML;
+              uCom.innerText = prod.querySelector('uCom').innerHTML;
+              qCom.innerText = prod.querySelector('qCom').innerHTML;
+              vUnCom.innerText = prod.querySelector('vUnCom').innerHTML;
+              vProd.innerText = prod.querySelector('vProd').innerHTML;
+
+              if (imposto.querySelector('vBC') != null) {
+                vBC.innerText = imposto.querySelector('vBC').innerHTML;
+                vICMS.innerText = imposto.querySelector('vICMS').innerHTML;
+                pICMS.innerText = imposto.querySelector('pICMS').innerHTML;
+              } else {
+                vBC.innerText = '0';
+                vICMS.innerText = '0';
+                pICMS.innerText = '0';
+              }
+
+              vIPI.innerText = totalIPI.children[0].querySelector(
+                'vIPI'
+              ).innerHTML;
+
+              if (totalIPI.children[0].querySelector('vIPI') != null) {
+                pIPI.innerText = '0';
+              } else {
+                pIPI.innerText = totalIPI.children[0].querySelector(
+                  'pIPI'
+                ).innerHTML;
+              }
+
+              row.appendChild(nItem);
+              row.appendChild(cProd);
+              row.appendChild(xProd);
+              row.appendChild(NCM);
+              row.appendChild(CFOP);
+              row.appendChild(uCom);
+              row.appendChild(qCom);
+              row.appendChild(vUnCom);
+              row.appendChild(vProd);
+              row.appendChild(vBC);
+              row.appendChild(vICMS);
+              row.appendChild(pICMS);
+              row.appendChild(pIPI);
+              row.appendChild(vIPI);
+
+              tabela.appendChild(row);
+            });
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

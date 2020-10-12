@@ -1,0 +1,17 @@
+Leitor de XML
+
+--Descrição--
+
+Cria um servidor disponibilizando a porta 3000, ao requisitar a porta ele irá abrir um formulário
+de uma Nota Fiscal, contendo as informações da Nota Fiscal, Emitente, Destinatário, Produtos e Serviços e
+Impostos.
+A leitura do arquivo está sendo HardCoded, ele faz a leitura somente de um arquivo XML com nome de XML.
+
+--Implementação--
+
+-NodeJS
+-JavaScript
+
+--Adicionais--
+-HTML 5
+-CSS 3

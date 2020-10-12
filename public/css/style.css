@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 95vw;
+  height: 100vh;
+  background-image: radial-gradient(white, rgb(189, 255, 227));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: roboto;
+}
+
+header {
+  width: 95vw;
+  height: 20vh;
+  line-height: 20vh;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(0, 114, 180);
+}
+
+menu {
+  width: 70vw;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#inputXML {
+  display: none;
+}
+#labelXML {
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  transition: all;
+  transition-duration: 1s;
+}
+
+#labelXML:hover {
+  background-color: white;
+  color: skyblue;
+}
+
+#buttonXML {
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  transition: all;
+  transition-duration: 1s;
+  outline: none;
+}
+
+#buttonXML:hover {
+  background-color: white;
+  color: skyblue;
+}
+
+fieldset {
+  width: 80vw;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+legend {
+  margin-left: 30px;
+}
+
+#container {
+  display: flex;
+  width: 95vw;
+  height: 25vh;
+  justify-content: center;
+  padding: 2px;
+  margin: 0 20px 80px 20px;
+}
+
+#tabela {
+  border-collapse: collapse;
+  margin: 0 20px 80px 20px;
+}
+
+th,
+td {
+  padding: 5px;
+}
